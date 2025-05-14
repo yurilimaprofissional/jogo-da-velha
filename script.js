@@ -3,9 +3,10 @@ selectXBtn = selecBox.querySelector(".playerX"),
 selectOBtn = selecBox.querySelector(".playerO"),
 playBoard = document.querySelector(".play-board"),
 allBox = document.querySelectorAll("section span"),
-players = document.querySelectorAll(".player"),
-resultBox = document.querySelectorAll(".player"),
-players = document.querySelectorAll(".player");
+players = document.querySelector(".players"),
+resultBox = document.querySelector(".result-box"),
+wonText = resultBox.querySelector(".won-text"),
+replayBtn = resultBox.querySelector(".button");
 
 window.onload = ()=> {
 
@@ -25,7 +26,7 @@ window.onload = ()=> {
     selectOBtn.onclick = ()=> {
         selecBox.classList.add("hide");
         playBoard.classList.add("show");
-        player.setAttribute("class", "player active players")
+        players.setAttribute("class", "player active players")
         ;
     }
 }
@@ -106,5 +107,22 @@ function selectWinner(){
     {
         runBot = false;
         bot(runBot);
+        setTimeout(()=> {
+            playBoard.classList.remove("show");
+            resultBox.classList.add("show");
+        },700);
+        wonText.innerHTML = `jogador <p>${playerSign}</p>
+        Ganhou!`;
+    }else{
+        if(getClass(1) != "" && getClass(2) != "" && getClass(3) != "" && getClass(4) != "" && getClass(5) != "" && getClass(6) != "" && getClass(7) != "" && getClass(8) != "" && getClass(9) != "" ){
+            runBot = false;
+        bot(runBot);
+        setTimeout(()=> {
+            playBoard.classList.remove("show");
+            resultBox.classList.add("show");
+        },700);
+        wonText.textContent = `jogo Empatou!`;
+
+        }
     }
 }
