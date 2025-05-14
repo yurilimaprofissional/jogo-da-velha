@@ -29,7 +29,7 @@ window.onload = ()=> {
 }
 
 let playerXIcon = "fas fa-times";
-let playerOIcon "fas fa-circle";
+let playerOIcon = "fas fa-circle";
 
 function clickedBox(element) {
     if(player.classList.contains("players")){
@@ -41,7 +41,11 @@ function clickedBox(element) {
         player.classList.add("active");
     }
     element.style.pointerEvents = "none";
-    bot();
+    let randomDelayTime = ((Math.random() * 1000) + 200).toFixed();
+    setTimeout(()=> {
+        bot();
+    },randomDelayTime);
+    
 }
 
 
