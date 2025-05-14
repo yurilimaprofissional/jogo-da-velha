@@ -6,7 +6,7 @@ allBox = document.querySelectorAll("section span"),
 players = document.querySelector(".players"),
 resultBox = document.querySelector(".result-box"),
 wonText = resultBox.querySelector(".won-text"),
-replayBtn = resultBox.querySelector(".button");
+replayBtn = resultBox.querySelector("button");
 
 window.onload = ()=> {
 
@@ -103,7 +103,7 @@ function checkClass(val1,val2,val3,sign){
 }
 
 function selectWinner(){
-    if(checkClass(1,2,3,playerSign) || checkClass(4,5,6,playerSign) || checkClass(6,7,8,playerSign) ||  checkClass(1,4,7,playerSign) || checkClass(2,5,8,playerSign) || checkClass(3,6,9,playerSign) || checkClass(1,5,9,playerSign) || checkClass(3,5,7,playerSign)) 
+    if(checkClass(1,2,3,playerSign) || checkClass(4,5,6,playerSign) || checkClass(7,8,9,playerSign) ||  checkClass(1,4,7,playerSign) || checkClass(2,5,8,playerSign) || checkClass(3,6,9,playerSign) || checkClass(1,5,9,playerSign) || checkClass(3,5,7,playerSign)) 
     {
         runBot = false;
         bot(runBot);
@@ -125,4 +125,8 @@ function selectWinner(){
 
         }
     }
+}
+
+replayBtn.onclick = ()=> {
+    window.location.reload();
 }
