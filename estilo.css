@@ -27,8 +27,7 @@ body {
     border-radius: 10px;
     max-width: 330px;
     width: 100%;
-   
-    /* display: none; */
+   /* display: none; */
 
 }
 
@@ -114,6 +113,7 @@ body {
 }
 
 .play-board .details span{
+    color: green;
     width: 100%;
     border-radius: 5px;
     padding: 7px 0;
@@ -123,6 +123,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 5;
+    transition: all 0.3s ease;
 }
 
 .details span:first-child{
@@ -140,6 +141,20 @@ body {
     background: green;
     border-radius: 5px;
     z-index: 2;
+    transition: all 0.3s ease;
+
+}
+
+.player.active span:first-child {
+    color: green;
+}
+
+.player.active span:nth-child(2) {
+    color: white;
+}
+
+.player.active .slider{
+    left: 50%;
 
 }
 
