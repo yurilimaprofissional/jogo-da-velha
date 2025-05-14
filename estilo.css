@@ -27,7 +27,7 @@ body {
     border-radius: 10px;
     max-width: 330px;
     width: 100%;
-   /* display: none; */
+    display: block;
 
 }
 
@@ -145,15 +145,15 @@ body {
 
 }
 
-.player.active span:first-child {
+.players.active span:first-child {
     color: green;
 }
 
-.player.active span:nth-child(2) {
+.players.active span:nth-child(2) {
     color: white;
 }
 
-.player.active .slider{
+.players.active .slider{
     left: 50%;
 
 }
