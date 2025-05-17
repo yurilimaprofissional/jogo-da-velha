@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #56baed;
+    background: rgb(121, 1, 1);
 }
 
 .select-box, .play-board , .result-box{
@@ -16,6 +16,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 0.3s ease;
+    box-shadow: 5px 5px 5px black;
 }
 .select-box{
     
@@ -58,7 +59,7 @@ body{
     padding: 8px 0;
     border: none;
     outline: none;
-    background: #56baed;
+    background: rgb(121, 1, 1);
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
@@ -99,7 +100,7 @@ body{
     justify-content: space-around;
 }
 .play-board .details span{
-   color: #56baed;
+   color: rgb(121, 1, 1);
     width: 100%;
     border-radius: 5px;
     padding: 7px 0;
@@ -120,13 +121,13 @@ body{
     left: 0;
     height: 100%;
     width: 50%;
-    background: #56baed;
+    background: rgb(121, 1, 1);
     border-radius: 5px;
     z-index: 2;
     transition: all 0.3s ease;
 }
 .players.active span:first-child{
-    color: #56baed;
+    color: rgb(121, 1, 1);
 }
 
 .players.active span:nth-child(2){
@@ -153,7 +154,7 @@ body{
     font-size: 40px;
     text-align: center;
     line-height: 80px;
-    color: #56baed;
+    color: rgb(121, 1, 1);
 }
 
 .result-box{
@@ -196,7 +197,7 @@ body{
     padding: 8px 20px;
     border: none;
     outline: none;
-    background: #56baed;
+    background: rgb(121, 1, 1);
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
